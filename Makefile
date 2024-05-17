@@ -1,4 +1,9 @@
-default: cordic
+default: run
+
+.PHONY: run
+
+run: cordic
+	./cordic
 
 cordic.o: cordic.asm
 	nasm -o cordic.o -f elf64 cordic.asm
